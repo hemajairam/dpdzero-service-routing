@@ -500,6 +500,8 @@ Config file: nginx/nginx.conf
 
 
 🛠️ Tech Used
+
+
 Docker, Docker Compose
 
 Nginx
@@ -509,10 +511,22 @@ Python (Flask + uv)
 Golang
 
 📋 Notes
+
 To check container health status:
+
+
 
 docker ps
 
+
+
 To view logs of all services:
 
+
+
+
+
+
 docker logs <container_id>
+
+
