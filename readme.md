@@ -11,13 +11,12 @@ This project sets up a Docker Compose-based system that includes:
 - A single entry point via `localhost:8080`
 
 All containers run in isolated Docker networks and are orchestrated using Docker Compose.
-
 ---
-
-
-
-
 ## 📁 Project Structure
+
+
+
+
 
 .
 ├── docker-compose.yml
@@ -34,10 +33,12 @@ All containers run in isolated Docker networks and are orchestrated using Docker
 │ ├── healthcheck.sh
 │ └── Dockerfile
 └── README.md
+
+
+
+
+
 ---
-
-
-
 
 ## ⚙️ Setup Instructions
 
@@ -68,6 +69,8 @@ Launches Nginx as a reverse proxy on port 8080
 
 🌐 Endpoints
 URL	Description
+
+
 http://localhost:8080/service1/ping	Health check from Go service
 http://localhost:8080/service1/hello	Hello endpoint from Go service
 http://localhost:8080/service2/ping	Health check from Python service
