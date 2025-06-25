@@ -61,22 +61,7 @@ All containers run in isolated Docker networks and are orchestrated using Docker
 
 
 
-.
-├── docker-compose.yml
-├── nginx
-│ ├── nginx.conf
-│ └── Dockerfile
-├── service_1
-│ ├── main.go
-│ └── Dockerfile
-├── service_2
-│ ├── app.py
-│ ├── pyproject.toml
-│ ├── uv.lock
-│ ├── healthcheck.sh
-│ └── Dockerfile
-└── README.md
-
+<pre lang="markdown"> ## 📁 Project Structure ``` . ├── docker-compose.yml ├── nginx │ ├── nginx.conf │ └── Dockerfile ├── service_1 │ ├── main.go │ └── Dockerfile ├── service_2 │ ├── app.py │ ├── pyproject.toml │ ├── uv.lock │ ├── healthcheck.sh │ └── Dockerfile └── README.md ``` </pre>
 
 
 
