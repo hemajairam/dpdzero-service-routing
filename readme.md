@@ -1,101 +1,98 @@
-### 🧪 **DevOps Intern Assignment: Nginx Reverse Proxy + Docker**
+# DPDzero DevOps Assignment – Nginx Reverse Proxy + Docker Compose
 
-You are expected to set up a simple system where:
+## 🚀 Overview
 
-1. **Two Dockerized backend services** (can be dummy services) run on different ports.
-2. An **Nginx reverse proxy** (also in a Docker container) routes:
+This project sets up a Docker Compose-based system that includes:
 
-   * `/service1` requests to backend service 1
-   * `/service2` requests to backend service 2
-3. All services must be accessible via a single port (e.g., `localhost:8080`).
+- A **Go (Golang)** backend service (`service1`)
+- A **Python (Flask)** backend service (`service2`)
+- An **Nginx reverse proxy** to route traffic to each service
+- Health checks for both services
+- A single entry point via `localhost:8080`
 
----
-
-### ✅ **Requirements**
-
-1. Use Docker Compose to bring up the entire system.
-2. Each backend service should respond with a JSON payload like:
-
-   ```json
-   {"service": "service1"}
-   ```
-3. The Nginx config should support:
-
-   * Routing based on URL path prefix (`/service1`, `/service2`)
-   * Logging incoming requests with timestamp and path
-4. The system should work with a single command:
-
-   ```bash
-   docker-compose up --build
-   ```
-5. Bonus: Add a health check for both services and show logs of successful routing.
+All containers run in isolated Docker networks and are orchestrated using Docker Compose.
 
 ---
 
-### 📁 Suggested Project Structure
+## 📁 Project Structure
 
-```
 .
 ├── docker-compose.yml
 ├── nginx
-│   ├── default.conf
-│   └── Dockerfile
+│ ├── nginx.conf
+│ └── Dockerfile
 ├── service_1
-│   ├── app.py
-│   └── Dockerfile
+│ ├── main.go
+│ └── Dockerfile
 ├── service_2
-│   ├── app.py
-│   └── Dockerfile
+│ ├── app.py
+│ ├── pyproject.toml
+│ ├── uv.lock
+│ ├── healthcheck.sh
+│ └── Dockerfile
 └── README.md
-```
-
 ---
 
-### 📦 Tech Constraints
+## ⚙️ Setup Instructions
 
-* Nginx must run in a Docker container, not on host
-* Use bridge networking (no host networking)
+### 1. Clone the Repository
 
----
+git https://github.com/hemajairam/dpdzero-service-routing
+cd dpdzero-service-routing
 
-### 📝 Submission Instructions
+### 2.Run the Application
 
-1. Upload your project to GitHub or GitLab.
-2. Include a short `README.md` with:
+docker compose up --build
 
-   * Setup instructions
-   * How routing works
-   * Any bonus you implemented
-3. Deadline: **1 week**
-4. Bonus points for:
+This command:
 
-   * Logging clarity
-   * Clean and modular Docker setup
-   * Healthcheck or automated test script
+Builds all three containers
 
----
+Sets up a bridge network
 
-### ❓FAQs
+Starts the Go and Python services
 
-**Q: Is this a full-time role?**
-Yes. You would need to be in office in Bangalore.
+Launches Nginx as a reverse proxy on port 8080
 
-**Q: Is there a stipend?**
-Yes. 20k INR per month
+🌐 Endpoints
+URL	Description
+http://localhost:8080/service1/ping	Health check from Go service
+http://localhost:8080/service1/hello	Hello endpoint from Go service
+http://localhost:8080/service2/ping	Health check from Python service
+http://localhost:8080/service2/hello	Hello endpoint from Python service
 
-**Q: How many positions are open?**
-Two positions are open.
+🔁 Nginx Reverse Proxy
+Nginx routes requests based on the URL path prefix:
 
-**Q: I am still in college. Can I apply?**
-Unfortunately, we are looking for post-college candidates.
+/service1 → Go backend
 
-**Q: Can I reach out for doubts?**
-No — due to the volume of submissions. Please use your creativity and assumptions where needed.
+/service2 → Python backend
 
-**Q: Can I use ChatGPT or Copilot?**
-Yes, feel free to use AI tools — we care about your implementation and understanding.
+Config file: nginx/nginx.conf
 
-**Q: This feels like a lot for an intern assignment.**
-We agree it’s non-trivial — we’ve received many applications, so this helps us filter based on quality.
+❤️ Bonus Implemented
+✅ Health checks for both services via docker-compose.yml
 
+✅ Shell script (healthcheck.sh) used for health check inside service_2
 
+✅ All services run on single port: localhost:8080
+
+✅ Graceful container startup with depends_on and start_period
+
+🛠️ Tech Used
+Docker, Docker Compose
+
+Nginx
+
+Python (Flask + uv)
+
+Golang
+
+📋 Notes
+To check container health status:
+
+docker ps
+
+To view logs of all services:
+
+docker logs <container_id>
