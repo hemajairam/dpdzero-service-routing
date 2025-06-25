@@ -57,7 +57,7 @@ All containers run in isolated Docker networks and are orchestrated using Docker
 
 
 
-
+```
 .
 ├── docker-compose.yml
 ├── nginx
@@ -74,7 +74,7 @@ All containers run in isolated Docker networks and are orchestrated using Docker
 │ └── Dockerfile
 └── README.md
 
-
+```
 
 
 
