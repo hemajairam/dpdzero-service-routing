@@ -143,6 +143,154 @@ All containers run in isolated Docker networks and are orchestrated using Docker
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## ⚙️ Setup Instructions
 
 ### 1. Clone the Repository
@@ -151,7 +299,6 @@ All containers run in isolated Docker networks and are orchestrated using Docker
 
 
 
-git https://github.com/hemajairam/dpdzero-service-routing
 
 
 
@@ -166,7 +313,64 @@ git https://github.com/hemajairam/dpdzero-service-routing
 
 
 
-cd dpdzero-service-routing
+
+
+
+
+
+git clone https://github.com/hemajairam/dpdzero-service-routing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cd  dpdzero-service-routing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -207,6 +411,22 @@ Sets up a bridge network
 Starts the Go and Python services
 
 Launches Nginx as a reverse proxy on port 8080
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
