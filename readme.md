@@ -18,6 +18,11 @@ All containers run in isolated Docker networks and are orchestrated using Docker
 
 
 
+
+
+
+
+
 .
 ├── docker-compose.yml
 ├── nginx
@@ -38,11 +43,28 @@ All containers run in isolated Docker networks and are orchestrated using Docker
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 
 ## ⚙️ Setup Instructions
 
 ### 1. Clone the Repository
+
+
+
+
 
 git https://github.com/hemajairam/dpdzero-service-routing
 cd dpdzero-service-routing
@@ -50,6 +72,10 @@ cd dpdzero-service-routing
 
 
 ### 2.Run the Application
+
+
+
+
 
 docker compose up --build
 
@@ -71,10 +97,26 @@ Launches Nginx as a reverse proxy on port 8080
 URL	Description
 
 
+
+
+
+
+
+
+
+
+
+
 http://localhost:8080/service1/ping	Health check from Go service
 http://localhost:8080/service1/hello	Hello endpoint from Go service
 http://localhost:8080/service2/ping	Health check from Python service
 http://localhost:8080/service2/hello	Hello endpoint from Python service
+
+
+
+
+
+
 
 
 
