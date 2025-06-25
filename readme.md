@@ -478,6 +478,8 @@ http://localhost:8080/service2/hello	Hello endpoint from Python service
 
 
 🔁 Nginx Reverse Proxy
+
+
 Nginx routes requests based on the URL path prefix:
 
 /service1 → Go backend
@@ -489,6 +491,8 @@ Config file: nginx/nginx.conf
 
 
 ❤️ Bonus Implemented
+
+
 ✅ Health checks for both services via docker-compose.yml
 
 ✅ Shell script (healthcheck.sh) used for health check inside service_2
