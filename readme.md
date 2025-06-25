@@ -307,7 +307,7 @@ All containers run in isolated Docker networks and are orchestrated using Docker
 
 
 
-git clone https://github.com/hemajairam/dpdzero-service-routing
+git     clone https://github.com/hemajairam/dpdzero-service-routing
 
 
 
@@ -333,7 +333,7 @@ git clone https://github.com/hemajairam/dpdzero-service-routing
 
 
 
-cd  dpdzero-service-routing
+cd     dpdzero-service-routing
 
 
 
