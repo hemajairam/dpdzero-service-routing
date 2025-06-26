@@ -16,7 +16,7 @@ services:
     networks:
       - app_net
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8001/ping"]
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:8001/ping"]
       interval: 10s
       timeout: 5s
       retries: 3
@@ -30,6 +30,7 @@ services:
       interval: 10s
       timeout: 5s
       retries: 3
+      start_period: 20s
 
 networks:
   app_net:
